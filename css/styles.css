@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap'); /*400 - 700*/
+
+:root{
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --bg-component: hsl(220, 20%, 12%);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/**MOBILE FIRST**/
+
+body{
+    background-color: var(--very-dark-blue);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+}
+
+.component{
+    background-color: hsl(220, 20%, 12%);
+    padding: 25px 25px;
+}
+
+.component__header-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+.component__header-img img{
+    display: flex;
+    width: 13px;
+    height: 13px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    color: var(--white);
+    font-weight: 700;
+}
+
+.message{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--medium-grey);
+    line-height: 1.5;
+}
+
+.rating{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.btn-rate{
+    display: inline-block;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--dark-blue);
+    color: var(--medium-grey);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 3.1;
+}
+
+.btn-submit{
+    display: block;
+    width: 100%;
+    background-color: var(--orange);
+    border: none;
+    padding: 3px 0 0 0;
+    cursor: pointer;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 2.8;
+    border-radius: 28px;
+}
+
+/*breakpoint 375px*/
+@media screen and (max-width: 375px) {
+    .component{
+        margin: 0 20px;
+    }
+}
